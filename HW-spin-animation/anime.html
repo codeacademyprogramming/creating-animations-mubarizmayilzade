@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: green;
+            display: flex;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            text-align: center;
+        }
+        .anime{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            background: black;
+            border-radius: 50%;
+            animation: anime 2s linear infinite;
+        }
+        @keyframes anime{
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        .anime2{
+            position: absolute;
+            width: 130px;
+            height: 130px;
+            background: green;
+            border-radius: 50%;
+        }
+        .anime::after{
+            content: "";
+            position: absolute;
+            top: 14%;
+            left: -5px;
+            border-radius: 50%;
+            width: 70px;
+            height: 110px;
+            z-index: 999; 
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="anime"></div>
+    <div class="anime2"></div>
+</body>
+</html>
